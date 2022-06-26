@@ -42,22 +42,30 @@
           </h2>
           <!--Setting up the content for user-info-->
           <div class="info">
-            <label>
-
+            <!--Link corresponding label and input elements. Provides visual
+              reference to the input"-->
+            <label for="user-name">
+              Name:
             </label>
-            <input />
+            <input id="user-name" type="text" name="user-name"/>
           </div>
           <div class="info">
-            <label>
-
+            <label for="user-email">
+              Email Address:
             </label>
-            <input />
+            <!--Important to give each input a type and name attribute-->
+            <input id="user-email" type="email" name="user-email" />
           </div>
-          <div class="info">
-            <label>
 
+          <div class="info">
+            <label for="user-dob">
+              D.O.B.
+              <!--Add text only a screen reader can read to make it more accessible for visually impared users-->
+              <span class="sr-only">
+                (Date of Birth):
+              </span>
             </label>
-            <input />
+            <input id="user-dob" type="date" name="user-dob"/>
           </div>
         </section>
 
