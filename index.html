@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <!--Description definition is an important meta element for accessibility and SEO
+    The value of the content attribute is used by search engines to provide a description of your page-->
+    <meta content="Learning accessibility by building a quiz." name="description"/>
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Accessibility Quiz</title>
+  </head>
+
+  <body>
+
+    <!--Used to introduce the page, as well as the nav menu-->
+    <header>
+        <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" id="logo"/>
+        <h1>Are You Smarter Than A Fifth Grader?
+        </h1>
+        <nav>
+          <ul>
+            <!--Added hrefs to the corresponding anchor elements. They match up with the 
+            h2 elements-->
+            <li><a href="#user-info">INFO</a></li>
+            <li><a href="#english-questions">HTML</a></li>
+            <li><a href="#math-questions">CSS</a></li>
+          </ul>
+        </nav>
+    </header>
+
+    <!--Will contain the core content of the page-->
+    <main>
+
+      <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+        <!--Role attribute is used to increase accessibility by indicating the purpose 
+        behind an element on the page to assistive technologies (WAI)-->
+        <section role="region" aria-labelledby="user-info">
+          <h2 id="user-info">
+            User Information 
+          </h2>
+          <!--Setting up the content for user-info-->
+          <div class="info">
+            <label>
+
+            </label>
+            <input />
+          </div>
+          <div class="info">
+            <label>
+
+            </label>
+            <input />
+          </div>
+          <div class="info">
+            <label>
+
+            </label>
+            <input />
+          </div>
+        </section>
+
+
+        <section role="region" aria-labelledby="english-questions">
+          <h2 id="english-questions">
+            English Questions
+          </h2>
+        </section>
+        <section role="region" aria-labelledby="math-questions">
+          <h2 id="math-questions"> 
+            Math Questions
+          </h2>
+        </section>
+      </form>
+    </main>
+
+  </body>
+  <footer>
+
+  </footer>
+</html>
