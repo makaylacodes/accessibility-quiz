@@ -126,17 +126,54 @@
           </div>
         </section>
 
-
+<!--Will use a dropdown for this section-->
         <section role="region" aria-labelledby="math-questions">
           <h2 id="math-questions"> 
             Math Questions
           </h2>
+          <div class="form-row">
+            <div class="question-block">
+              <label for="q1">A convex shape curves outwards.</label>
+            </div>
+            <div class="answer">
+              <select required name="q1" id="q1">
+                <option value="">
+                  Select an option 
+                </option>
+                <option value="true">
+                  True
+                </option>
+                <option value="false">
+                  False
+                </option>
+              </select>
+            </div>
+            <div class="question-block">
+              <label for="math-questions">What is an isosleces triangle? </label>
+            </div>
+            <div class="answer">
+              <!--sets the size of the textbox-->
+              <textarea placeholder="An isosceles triangle is ... " rows="5" cols="40" id="math-questions" name="math-questions">
+
+              </textarea>
+            </div>
+          </div>
         </section>
+
+        <button type="submit">Submit</button>
+
       </form>
     </main>
 
   </body>
   <footer>
-
+    <address>
+      <a href="https://freecodecamp.org">
+        freeCodeCamp
+      </a><br />
+      San Francisco<br />
+      California<br />
+      USA
+    </address>
   </footer>
 </html>
