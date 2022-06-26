@@ -74,7 +74,59 @@
           <h2 id="english-questions">
             English Questions
           </h2>
+          <div class="question-block">
+            <p>
+              1
+            </p>
+            <fieldset class="question" name="english-questions">
+              <legend>
+                A stream is bigger than a river.
+              </legend>
+              <ul class="answers-list">
+                <!--Adding input with type radio to ensure only one can be selected-->
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" id="q1-a1"value="true" name="q1"/>
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <!--Used the name attribute to ensure only one radio button can be selected at a time-->
+                    <input type="radio" id="q1-a2" value="false" name="q1"/>
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="question-block">
+            <p>
+              2
+            </p>
+            <fieldset class="question" name="english-questions">
+              <legend>
+                There are 1,000 years in a century.
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" value="true" name="q2"/>
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" value="false" name="q2"/>
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
         </section>
+
+
         <section role="region" aria-labelledby="math-questions">
           <h2 id="math-questions"> 
             Math Questions
