@@ -1,3 +1,10 @@
+
+/*Clicking on the nav links Jump the viewport to the relevant section. 
+However, this jumping can be disorienting for some users. Smooth
+will give the page a smooth transisiton*/
+*{
+	scroll-behavior:smooth;
+  }
 body {
 	background: #f5f6f7;
 	color: #1b1b32;
@@ -8,31 +15,41 @@ body {
 
 /*To scale the image. */ 
 #logo{
-	width:max(100px, 18vw);
+	width:max(100px, 10.8vw);
     background-color: #0a0a23;
     /*sets the desired aspect ratio*/
-	aspect-ratio: 25/20;
+	aspect-ratio: 25/5;
 	padding: .4rem;
 }
-
 header{
     /*takes up the full width of its parent*/
 	width:100%;
-	height:50px;
+	height:48px;
 	background-color:#1b1b32;
     /*allows me to use flexbox*/
 	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	position:fixed;
+	top:0;
 }
 
 h1{
     color: #e6e6e6;
-    font-size: min(5vw, 1.8em);
+    font-size: min(4vw, 1.7em);
     text-align: center;
+	overflow: hidden;
 }
 
 nav > ul{
     display: flex;
 	justify-content: space-evenly;
+	/**/
+	flex:wrap;
+	align-items: center;
+	padding-inline-start: 0;
+	margin-block: 0;
+	
 }
 
 /*Typeface plays an important role in accessibility. Some 
@@ -41,9 +58,12 @@ true on low-resolution screens.*/
 h1, h2{
     /*chose Tahoma as the fallback web-safe font*/
 	font-family: Verdana, Tahoma;
+	
 }
 h2{
 	border-bottom: 4px solid#dfdfe2;
+	margin-top:0;
+  padding-top:60px;
 }
 
 /*To hide the text, use this common pattern. This way only 
@@ -64,3 +84,136 @@ border: 0;
 p::before{
 	content:"Question #";
 }
+
+/*Nav bar list items*/
+nav li{
+	color: #dfdfe2;
+	margin: 0 0.2rem;
+	padding: 0.2rem;
+	display: block;
+}
+/*Changes the color of the link text*/
+li > a{
+	color:inherit;
+}
+
+/*Changes the color when the cursor hovers on the list items on the nav bar*/
+nav li:hover{
+	background-color:#dfdfe2;
+	color:#1b1b32;
+	cursor:pointer;
+	text-align:center;
+}
+/*User Info Section*/
+main{
+	padding-top:25px;
+  }
+
+nav > ul{
+	display:flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-inline-start: 0;
+	margin-block: 0;
+	height: 100%;
+  }
+
+  section{
+	margin-top:0;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	width:80%;
+	max-width:600px;
+	
+}
+
+.info {
+	padding: 13px 0 0 5px;
+  }
+
+.formrow {
+	margin-top: 30px;
+	padding: 0px 15px;
+}
+  
+input {
+	font-size: 18px;
+}
+/*TO make the first section look more inline*/
+.info input{
+	width:50%;
+	text-align:left;
+  }
+/*targeting all label elements within .info elements*/
+ .info label{
+	width:10%;
+	min-width:55px;
+}
+
+.info label, .info input{
+	display:inline-block;
+	text-align:right;
+  }
+
+.question-block {
+	text-align: left;
+	display:flexbox;
+	width: 100%;
+	margin-top: 20px;
+	padding-top: 5px;
+  }
+ 
+  /*question #*/
+  p{
+	margin-top: 5px;
+  	padding-left: 15px;
+  	font-size: 23px;
+  }
+
+  /*Removes the border from fieldset and styles it*/
+  .question{
+	border:none;
+	padding-bottom:0;
+  }
+
+  /*removes the default styling for the radio buttons*/
+  .answers-list{
+    padding:0;
+    list-style:none;
+  }
+
+  /*styles the submit button*/
+  button{
+	display: block;
+	margin: 40px auto;
+	width: 40%;
+	padding: 15px;
+	font-size: 23px;
+	background: #d0d0d5;
+	border: 3px solid #3b3b4f;
+  }
+
+  /**/
+  footer{
+	background-color:#2a2a40;
+	display:flex;
+	justify-content:center;
+  }
+
+  /*Includes the hyperlink so I don't have to repeat code*/
+  footer, footer a{
+	color:#dfdfe2;
+  }
+
+  address{
+	padding:20px;
+	text-align:center;
+  }
+
+  /*Motion based animations can cause discomfort for some users. */
+  @media (prefers-reduced-motion: no-preference) {
+	* {
+	scroll-behavior: smooth;
+  }
+  }
